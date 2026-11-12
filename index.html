@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RSK Solutions - Telecom & DID Hub</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans">
+​<!-- Header / Navigation -->
+<header class="bg-slate-900 border-b border-slate-800 p-4 sticky top-0 z-50 shadow-md">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<div class="flex items-center space-x-3">
+<div class="bg-blue-600 p-2.5 rounded-xl text-white shadow-lg shadow-blue-500/30">
+<i class="fa-solid fa-tower-broadcast text-lg"></i>
+</div>
+<div>
+<h1 class="text-lg font-bold tracking-wide text-white">RSK Solutions</h1>
+<p class="text-xs text-slate-400">Android & Cloud PBX Hub</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20">
+<span class="w-2 h-2 mr-1.5 bg-green-400 rounded-full animate-pulse"></span> Firebase & Server Synced
+</span>
+</div>
+</div>
+</header>
+​<!-- Main Container -->
+<main class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 space-y-6">
+​<!-- Status Banner -->
+<section class="bg-gradient-to-r from-blue-900/40 via-slate-900 to-indigo-950 border border-blue-500/20 rounded-2xl p-6 shadow-xl relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 text-blue-500/10 text-9xl pointer-events-none">
+<i class="fa-solid fa-mobile-screen-button"></i>
+</div>
+<div class="relative z-10">
+<span class="text-xs font-semibold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20">Repository: rsk-solutions-android</span>
+<h2 class="text-2xl md:text-3xl font-bold mt-2 mb-2 text-white">Mobile & Cloud Integration Dashboard</h2>
+<p class="text-slate-300 text-sm mb-4 max-w-2xl">
+Your Android app structure is linked with Firebase Project ID <code class="text-blue-300 bg-slate-800 px-1.5 py-0.5 rounded">rsk-solutions-1118d</code> and Ubuntu Server <code class="text-green-300 bg-slate-800 px-1.5 py-0.5 rounded">103.125.254.99</code>.
+</p>
+<div class="flex flex-wrap gap-3 text-xs font-mono text-slate-300">
+<span class="bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-800"><i class="fa-solid fa-code-branch text-blue-400 mr-1.5"></i> Main Branch Active</span>
+<span class="bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-800"><i class="fa-solid fa-shield-halved text-emerald-400 mr-1.5"></i> RBAC Roles Ready</span>
+</div>
+</div>
+</section>
+​<!-- Quick Actions & Panels -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-5">
+​<!-- Telephony Panel Card -->
+<div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-blue-500/50 transition flex flex-col justify-between shadow-lg">
+<div>
+<div class="text-blue-400 text-2xl mb-3"><i class="fa-solid fa-network-wired"></i></div>
+<h3 class="text-lg font-bold text-white mb-1">Telecom Admin Panel</h3>
+<p class="text-xs text-slate-400 mb-6">Manage extensions, Agni DID mapping, and live call logs directly from server.</p>
+</div>
+<a href="http://103.125.254.99/telecom-panel.php" target="_blank" class="w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold py-2.5 px-4 rounded-xl transition shadow-md shadow-blue-600/20 flex items-center justify-center space-x-2">
+<span>Open Panel</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
+</div>
+​<!-- GitHub Source Control Card -->
+<div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-indigo-500/50 transition flex flex-col justify-between shadow-lg">
+<div>
+<div class="text-indigo-400 text-2xl mb-3"><i class="fa-brands fa-github"></i></div>
+<h3 class="text-lg font-bold text-white mb-1">GitHub Repository</h3>
+<p class="text-xs text-slate-400 mb-6">View your README, commit history, and Kotlin/Compose source files online.</p>
+</div>
+<a href="https://github.com/ullashtmc-max/rsk-solutions-android" target="_blank" class="w-full text-center bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold py-2.5 px-4 rounded-xl transition border border-slate-700 flex items-center justify-center space-x-2">
+<span>View Repository</span> <i class="fa-solid fa-code"></i>
+</a>
+</div>
+​<!-- Firebase Console Card -->
+<div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-amber-500/50 transition flex flex-col justify-between shadow-lg">
+<div>
+<div class="text-amber-400 text-2xl mb-3"><i class="fa-solid fa-fire"></i></div>
+<h3 class="text-lg font-bold text-white mb-1">Firebase Console</h3>
+<p class="text-xs text-slate-400 mb-6">Manage authentication, Firestore database, and Android app build settings.</p>
+</div>
+<a href="https://console.firebase.google.com" target="_blank" class="w-full text-center bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold py-2.5 px-4 rounded-xl transition shadow-md shadow-amber-600/20 flex items-center justify-center space-x-2">
+<span>Open Console</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
+</div>
+​</section>
+​<!-- User Roles Hierarchy Section -->
+<section class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg">
+<h3 class="text-base font-bold text-white mb-4 flex items-center">
+<i class="fa-solid fa-users-gear text-blue-400 mr-2"></i> Configured User Access Hierarchy
+</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+<div class="text-blue-400 font-semibold mb-1">Customer</div>
+<div class="text-xs text-slate-500">End User & Calling</div>
+</div>
+<div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+<div class="text-indigo-400 font-semibold mb-1">Master Reseller</div>
+<div class="text-xs text-slate-500">Sub-Account Control</div>
+</div>
+<div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+<div class="text-emerald-400 font-semibold mb-1">Sub-Agent</div>
+<div class="text-xs text-slate-500">DID Management</div>
+</div>
+<div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+<div class="text-amber-400 font-semibold mb-1">IP Agent</div>
+<div class="text-xs text-slate-500">Gateway Routing</div>
+</div>
+</div>
+</section>
+​</main>
+​<!-- Footer -->
+<footer class="bg-slate-900 border-t border-slate-800 py-4 px-6 text-center text-xs text-slate-500">
+© 2026 RSK Solutions - IT & Telecommunication Division. All rights reserved.
+</footer>
+​</body>
+  
+  </html>
