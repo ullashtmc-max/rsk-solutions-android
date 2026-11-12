@@ -1,5 +1,5 @@
 - name: Build Customer APK
-        run: ./gradlew :customer-app:assembleDebug --stacktrace
+        run: /.gradlew :customer-app:assembleDebug --stacktrace
 
       - name: Upload Customer APK
         if: success()
