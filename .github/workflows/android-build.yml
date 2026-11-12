@@ -1,4 +1,4 @@
-name: .github/workflows/android-build.yml
+name: RSK Android APK Build
 
 on:
   workflow_dispatch:
