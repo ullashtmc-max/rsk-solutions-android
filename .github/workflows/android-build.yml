@@ -1,52 +1,9 @@
-name: RSK Android APK Build
+- name: Build Customer APK
+        run: ./gradlew :customer-app:assembleDebug --stacktrace
 
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-
-permissions:
-  contents: read
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Setup Java 17
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-          cache: 'gradle'
-
-      # ধাপ ১: গিটহাব রানারে গ্রেডল ৮.১১.১ ইনস্টল করা
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: '8.11.1'
-
-      # ধাপ ২: সার্ভার নিজেই সম্পূর্ণ আসল Gradle Wrapper ও JAR তৈরি করে নেবে
-      - name: Generate Gradle Wrapper
-        run: gradle wrapper --gradle-version 8.11.1
-
-      - name: Grant Execute Permission
-        run: chmod +x gradlew
-
-      # ধাপ ৩: APK বিল্ড
-      - name: Build Customer and Agent APK
-        run: ./gradlew :customer-app:assembleDebug :agent-app:assembleDebug --stacktrace
-
-      # ধাপ ৪: APK ডাউনলোড করার ব্যবস্থা
-      - name: Upload APK Artifacts
+      - name: Upload Customer APK
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: RSK-Solutions-Android-APKs
-          path: |
-            customer-app/build/outputs/apk/debug/*.apk
-            agent-app/build/outputs/apk/debug/*.apk
+          name: RSK-Customer-APK
+          path: customer-app/build/outputs/apk/debug/*.apk
