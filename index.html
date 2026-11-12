@@ -1,4 +1,109 @@
+```html
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSK Solutions - Cloud PBX & VoIP Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans">
+
+    <!-- Header / Navigation with Logo -->
+    <header class="bg-slate-900 border-b border-slate-800 p-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://raw.githubusercontent.com/ullashtmc-max/rsk-solutions-android/main/logo.png" alt="RSK Logo" class="w-11 h-11 object-contain rounded-xl border border-blue-500/30 bg-slate-950 p-1 shadow-md shadow-blue-500/20" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'45\' fill=\'%230f172a\' stroke=\'%233b82f6\' stroke-width=\'5\'/><text x=\'50\' y=\'60\' font-size=\'35\' font-weight=\'bold\' fill=\'%2338bdf8\' text-anchor=\'middle\'>RSK</text></svg>'">
+                <div>
+                    <h1 class="text-sm font-bold text-white tracking-wider">RSK SOLUTIONS</h1>
+                    <p class="text-[10px] text-blue-400">Cloud PBX & VoIP Solutions</p>
+                </div>
+            </div>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <span class="w-2 h-2 mr-1.5 bg-emerald-400 rounded-full animate-pulse"></span> App Ready
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-1 max-w-4xl w-full mx-auto p-4 space-y-5">
+        
+        <!-- Brand Identity Banner -->
+        <section class="bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 border border-blue-500/30 rounded-2xl p-6 shadow-xl text-center relative overflow-hidden">
+            <div class="flex flex-col items-center justify-center space-y-3">
+                <img src="https://raw.githubusercontent.com/ullashtmc-max/rsk-solutions-android/main/logo.png" alt="RSK Banner Logo" class="w-24 h-24 object-contain rounded-2xl border-2 border-blue-500/40 shadow-xl bg-slate-950 p-2" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'45\' fill=\'%230f172a\' stroke=\'%233b82f6\' stroke-width=\'5\'/><text x=\'50\' y=\'60\' font-size=\'35\' font-weight=\'bold\' fill=\'%2338bdf8\' text-anchor=\'middle\'>RSK</text></svg>'">
+                <div>
+                    <h2 class="text-2xl font-black text-white tracking-wide">RSK SOLUTIONS</h2>
+                    <p class="text-blue-400 text-xs font-medium mt-1">Cloud PBX & VoIP Solutions • Enterprise Telecom Partner</p>
+                </div>
+            </div>
+            <div class="mt-6 flex flex-col sm:flex-row justify-center gap-3">
+                <button onclick="triggerApkDownload()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs py-3 px-6 rounded-xl transition shadow-lg shadow-blue-600/30 flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-download text-sm"></i>
+                    <span>Download App APK</span>
+                </button>
+                <a href="https://github.com/ullashtmc-max/rsk-solutions-android" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs py-3 px-6 rounded-xl transition border border-slate-700 flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-github text-sm"></i>
+                    <span>GitHub Repository</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Specs Grid -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-md flex items-center space-x-3">
+                <div class="bg-emerald-600/20 text-emerald-400 p-3 rounded-xl"><i class="fa-solid fa-server text-base"></i></div>
+                <div>
+                    <h3 class="font-semibold text-xs text-white">Ubuntu Server IP</h3>
+                    <p class="text-xs text-slate-400">103.125.254.99</p>
+                </div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-md flex items-center space-x-3">
+                <div class="bg-indigo-600/20 text-indigo-400 p-3 rounded-xl"><i class="fa-solid fa-cloud text-base"></i></div>
+                <div>
+                    <h3 class="font-semibold text-xs text-white">Google Cloud & Gemini</h3>
+                    <p class="text-xs text-slate-400">Project ID: gen-lang-client</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal -->
+    <div id="apkModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 max-w-sm w-full text-center shadow-2xl">
+            <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-xl mx-auto mb-3">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">App Installation Ready</h3>
+            <p class="text-xs text-slate-300 mb-5">
+                আপনার ব্রাউজারের থ্রি-ডট মেনু (⋮) থেকে <b class="text-blue-400">"Add to Home screen"</b> বা <b class="text-blue-400">"Install app"</b> সিলেক্ট করলেই এটি সরাসরি আপনার ফোনে পূর্ণাঙ্গ অ্যান্ড্রয়েড অ্যাপ হিসেবে ইনস্টল হয়ে যাবে।
+            </p>
+            <button onclick="closeModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold py-2.5 rounded-xl transition border border-slate-700">
+                বুঝেছি (Close)
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-3 px-4 text-center text-xs text-slate-500">
+        &copy; 2026 RSK Solutions - Cloud PBX & VoIP Solutions
+    </footer>
+
+    <script>
+        function triggerApkDownload() {
+            document.getElementById('apkModal').classList.remove('hidden');
+            document.getElementById('apkModal').classList.add('flex');
+        }
+        function closeModal() {
+            document.getElementById('apkModal').classList.remove('flex');
+            document.getElementById('apkModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
+```<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
