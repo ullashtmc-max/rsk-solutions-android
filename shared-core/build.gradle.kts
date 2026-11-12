@@ -25,3 +25,11 @@ android {
 kotlin {
     jvmToolchain(17)
 }
+dependencies {
+    implementation(
+        platform("androidx.compose:compose-bom:2025.03.00")
+    )
+
+    implementation("androidx.compose.runtime:runtime")
+    implementation("androidx.compose.ui:ui")
+}
